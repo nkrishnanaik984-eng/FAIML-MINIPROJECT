@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SecurePay</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+    <h1>Secure<span>Pay</span></h1>
+    <p>AI-Powered Fraud Detection</p>
+
+    <form action="/predict" method="post">
+        <input type="number" name="transaction_amount" placeholder="Transaction Amount" required>
+
+        <select name="transaction_type">
+            <option>Online</option>
+            <option>POS</option>
+            <option>ATM</option>
+        </select>
+
+        <select name="merchant_category">
+            <option>Food</option>
+            <option>Shopping</option>
+            <option>Travel</option>
+            <option>Electronics</option>
+            <option>Cash</option>
+        </select>
+
+        <select name="card_present">
+            <option value="1">Card Present</option>
+            <option value="0">Card Not Present</option>
+        </select>
+
+        <select name="international">
+            <option value="0">Domestic</option>
+            <option value="1">International</option>
+        </select>
+
+        <input type="number" name="transaction_hour" placeholder="Hour (0-23)" required>
+
+        <button type="submit">Analyze</button>
+    </form>
+</div>
+
+</body>
+</html>
