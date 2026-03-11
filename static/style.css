@@ -1,0 +1,40 @@
+body {
+    background: url("https://images.unsplash.com/photo-1605902711622-cfb43c4437b5") center/cover no-repeat;
+    font-family: Arial;
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: -1;
+}
+
+.container {
+    width: 400px;
+    margin: 80px auto;
+    background: rgba(0,0,0,0.85);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 span {
+    color: red;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
